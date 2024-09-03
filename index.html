@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>안케님 썸네일 자료</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh; /* 전체 화면 높이 */
+            display: flex;
+            flex-direction: column; /* 수직 정렬 */
+            align-items: center; /* 중앙 정렬 */
+            justify-content: flex-start; /* 상단 정렬 */
+        }
+        #main3 {
+            width: 85%; /* 너비를 상대적으로 조정 */
+            max-width: 1300px; /* 최대 너비 설정 */
+            text-align: center; /* 텍스트 중앙 정렬 */
+            background-color: rgb(34, 29, 29); /* 배경 색상 */
+            padding: 10px 0px; /* 여백 추가 */
+            margin-top: 15px; /* 상단 여백 추가 */
+        }
+        #main2 {
+            width: 85%; /* 너비를 상대적으로 조정 */
+            max-width: 1300px; /* 최대 너비 설정 */
+            text-align: center; /* 텍스트 중앙 정렬 */
+            background-color: antiquewhite;
+        }
+        #main1{
+            width: 85%; /* 너비를 상대적으로 조정 */
+            max-width: 1300px; /* 최대 너비 설정 */
+            text-align: center; /* 텍스트 중앙 정렬 */
+            background-color: antiquewhite;
+            color: rgb(36, 2, 22);
+
+        }
+        #main4{
+            width: 85%; /* 너비를 상대적으로 조정 */
+            max-width: 1300px; /* 최대 너비 설정 */
+            text-align: center; /* 텍스트 중앙 정렬 */
+            background-color: antiquewhite;
+            color: rgb(36, 2, 22);
+        }
+        .aa1 {
+            margin: 0; /* 기본 마진 제거 */
+            color: rgb(223, 209, 192);
+        }
+        p {
+            margin: 0; /* 기본 마진 제거 */
+        }
+        .image-container {
+            position: relative;
+            display: inline-block;
+            margin: 10px;
+        }
+        .image-container img {
+            cursor: pointer; /* 클릭 시 커서 모양 변경 */
+            max-width: 100%; /* 부모 요소의 너비에 맞게 조정 */
+        }
+        .image-title {
+            position: absolute;
+            top: 5px; /* 하단 여백 */
+            left: 50%;
+            transform: translateX(-50%); /* 중앙 정렬 */
+            color: #fff; /* 제목 색상 */
+            background-color: rgba(0, 0, 0, 0.5); /* 반투명 배경 */
+            padding: 5px; /* 여백 추가 */
+            border-radius: 5px; /* 모서리 둥글게 */
+        }
+        .modal {
+            display: none; /* 기본적으로 숨김 */
+            position: fixed; /* 화면 전체에 고정 */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8); /* 반투명 검정 배경 */
+            justify-content: center; /* 중앙 정렬 */
+            align-items: center; /* 중앙 정렬 */
+            z-index: 1000; /* 다른 요소 위에 표시 */
+        }
+        .modal img {
+            max-width: 100%; /* 모달 창 내에서 이미지 최대 너비 */
+            max-height: 95%; /* 모달 창 내에서 이미지 최대 높이 */
+        }
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: #fff;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        p{
+            font-size: 20px;
+        }
+        .image-description {
+            margin-top: 5px; /* 이미지와 설명 사이 여백 */
+            color: #3f2020; /* 설명 텍스트 색상 */
+            font-size: 14px; /* 설명 텍스트 크기 */
+        }
+    </style>
+</head>
+<body>
+    <div id="main3">
+        <h1 class="aa1">안케랜드 썸네일러 지원 샘플</h1>
+    </div>
+    <div id="main1">
+        <br><br>
+        <p><strong>안녕하세요! 이번에 안케랜드 썸네일러 모집글을 보고 지원하게 된 한다솜입니다!</strong></p>
+        <p><strong>썸네일 샘플 작업물들에 대해 간략한 설명과 함께 포트폴리오 자료를 준비해 보았습니다!</strong></p>
+        <br>
+    </div>
+    <div id="main4">
+        <p><strong>썸네일 샘플은 안케님의 캐릭터로 만든 2장과 다른 자료 8장으로 총 10장으로 되어 있으며,</strong></p>
+        <p><strong>썸네일 샘플 1번부터 번호가 커질수록 예전에 작업한 작품이며 썸네일 샘플 8번의 경우는</strong></p>
+        <p><strong>따로 이상 성욕이나 19금 드립에 대한 부분을 보여드리기 위해 러프로만 작업 해 보았습니다!</strong></p>
+        <br>
+    </div>
+
+
+    <div id="main2">
+        <div class="image-container">
+            <img src="img/w.png" id="img1" width="500px">
+            <div class="image-title">안케님 썸네일 1</div>
+            <div class="image-description"><strong>안케님 썸네일 1번은 모집 글을 보고 안케님 캐릭터로 된 샘플을 보여드리고자</strong></div>
+            <div class="image-description"><strong>2024/08/25 방송 유튜브 다시 보기 기준 4:00~5:44까지의 상황을 참고하여</strong></div>
+            <div class="image-description"><strong>흑안케와 백안케와 냥안케의 차이점과 특징을 표현해 보았습니다!</strong></div>
+        </div>
+        <div class="image-container">
+            <img src="img/e.png" id="img2" width="500px">
+            <div class="image-title">안케님 썸네일 2</div>
+            <div class="image-description"><strong>안케님 썸네일 2번도 안케님 캐릭터로 된 샘플을 보여드리려 작업하여</strong></div>
+            <div class="image-description"><strong>흑안케 쿠노이치가 벽에 끼여 버렸다 밈으로 샘플 8번과 마찬가지로</strong></div>
+            <div class="image-description"><strong>이상성욕 관련 표정이나 구도에 대한 자료용으로 제작해 보았습니다!</strong></div>
+        </div>
+        <br>
+        <div class="image-container">
+            <img src="img/a.png" id="img1" width="500px">
+            <div class="image-title">썸네일 샘플 1</div>
+        </div>
+        <div class="image-container">
+            <img src="img/s.png" id="img2" width="500px">
+            <div class="image-title">썸네일 샘플 2</div>
+        </div>
+        <br>
+        <div class="image-container">
+            <img src="img/t.png" id="img1" width="500px">
+            <div class="image-title">썸네일 샘플 3</div>
+        </div>
+        <div class="image-container">
+            <img src="img/x.png" id="img2" width="500px">
+            <div class="image-title">썸네일 샘플 4</div>
+        </div>
+        <br>
+        <div class="image-container">
+            <img src="img/z.png" id="img1" width="500px">
+            <div class="image-title">썸네일 샘플 5</div>
+        </div>
+        <div class="image-container">
+            <img src="img/d.png" id="img2" width="500px">
+            <div class="image-title">썸네일 샘플 6</div>
+        </div>
+        <br>
+        <div class="image-container">
+            <img src="img/q.png" id="img1" width="500px">
+            <div class="image-title">썸네일 샘플 7</div>
+        </div>
+        <div class="image-container">
+            <img src="img/r.png" id="img2" width="500px">
+            <div class="image-title">썸네일 샘플 8</div>
+        </div>
+
+    </div>
+    <div id="modal" class="modal">
+        <span id="close" class="modal-close">&times;</span>
+        <img id="modal-img" src="" alt="Enlarged Image">
+    </div>
+    <script>
+        // 모달 관련 변수
+        const modal = document.getElementById('modal');
+        const modalImg = document.getElementById('modal-img');
+        const close = document.getElementById('close');
+
+        // 모든 이미지 요소를 가져와 클릭 이벤트 추가
+        document.querySelectorAll('#main2 img').forEach(img => {
+            img.onclick = function() {
+                modal.style.display = 'flex';
+                modalImg.src = this.src;
+            };
+        });
+
+        // 모달 닫기 버튼 클릭 시 모달 닫기
+        close.onclick = function() {
+            modal.style.display = 'none';
+        };
+
+        // 모달 바깥 클릭 시 모달 닫기
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        };
+    </script>
+</body>
+</html>
